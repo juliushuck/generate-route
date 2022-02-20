@@ -13,9 +13,9 @@ npm i @juliushuck/generate-route
 ### 2. Import the generate function
 
 ```js
-import generate from "@juliushuck/gen-route";
+import generate from "@juliushuck/generate-route";
 // or
-var generate = require("@juliushuck/gen-route");
+var generate = require("@juliushuck/generate-route");
 ```
 
 ### 3. Generate your routes structure with sub routes
