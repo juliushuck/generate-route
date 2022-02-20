@@ -1,0 +1,32 @@
+{
+  "name": "@juliushuck/generate-route",
+  "version": "1.0.0",
+  "description": "This is a function that can generate all kinds of routes and sub routes. It can be used to generate routes for express routers, react routers or to generate urls for api calls.",
+  "keywords": [
+    "generate",
+    "route",
+    "path",
+    "express",
+    "react"
+  ],
+  "author": {
+    "name": "Julius Huck",
+    "email": "mail@juliushuck.com",
+    "url": "https://juliushuck.com"
+  },
+  "scripts": {
+    "test": "node ./node_modules/mocha/bin/_mocha"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "query-string": "^7.0.1",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.2"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

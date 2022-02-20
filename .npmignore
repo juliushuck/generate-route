@@ -1,0 +1,14 @@
+/dist
+/logs
+/node_modules
+stats.json
+
+.env.development.local
+.env.local
+.env.production.local
+.env.test.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+.DS_Store
