@@ -66,7 +66,7 @@ routes()
 // app.com/posts/:postId
 routes().posts().getById().build();
 
-// Build not to the highest level route, by setting isRootsParent to true one of the lower level routes.
+// Build not to the highest level route, by setting isRootsParent to true on one of the lower level routes.
 // /:postId/comments/:commentId
 routes().posts(true).getById().comments().getById().build();
 
@@ -75,7 +75,7 @@ routes().posts(true).getById().comments().getById().build();
 routes().posts().build({ page: "abc", pageSize: "abc" });
 ```
 
-For more examples, please have a look at the tests/tests.js file.
+For more examples, please have a look at the test/tests.js file.
 
 When you have a frontend and a backend, I recommend you to create two files. Then generate the routes for the frontend in one file and for the backend in the other one. Then export the routes from the files and share the files between the two projects in a shared git submodule or so.
 
