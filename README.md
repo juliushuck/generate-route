@@ -51,7 +51,7 @@ _When you look closely, you can see that posts has an additional route called ge
 ```js
 // Build routes without values for the parameter placeholders.
 // app.com/posts/:postId/comments/:commentId
-console.log(routes().posts().getById().comments().getById().build());
+routes().posts().getById().comments().getById().build();
 
 // Build routes with values for the parameter placeholders.
 // app.com/posts/123/comments/456
