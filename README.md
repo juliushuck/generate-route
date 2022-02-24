@@ -1,6 +1,6 @@
 # generate-route
 
-This package can generate route structures and build routes. It supports nested routes, parameter placeholders and query parameters. It can be used for APIs, SPAs, apps, etc.
+This package can generate route structures and build routes. It supports sub routes, parameter placeholders and query parameters. It can be used for APIs, SPAs, apps, etc.
 
 ## All features
 
@@ -27,7 +27,7 @@ import { generate } from "@juliushuck/generate-route";
 const { generate } = require("@juliushuck/generate-route");
 ```
 
-### 3. Generate your route structure with sub routes
+### 3. Generate your route structure
 
 ```txt
 app.com // Highest level route
