@@ -21,9 +21,9 @@ const generate =
         segmentsToJoin.push(buildPrev());
         segmentsToJoin.push(
           ...Object.keys(args).reduce(
-            (segmentsWithArgsAccumulator, x) =>
-              segmentsWithArgsAccumulator.map((y) =>
-                y !== `:${x}` ? y : String(args[x])
+            (segmentsWithArgsAccumulator, arg) =>
+              segmentsWithArgsAccumulator.map((segment) =>
+                segment !== `:${arg}` ? segment : String(args[arg])
               ),
             segments
           )
@@ -46,4 +46,4 @@ const generate =
     };
   };
 
-module.exports = generate;
+module.exports.generate = generate;

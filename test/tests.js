@@ -1,5 +1,6 @@
-var expect = require("chai").expect;
-var generate = require("../index.js");
+const expect = require("chai").expect;
+
+const { generate } = require("../index.js");
 
 describe("Use nested routes definition", () => {
   it("app.com", () => {
@@ -202,7 +203,7 @@ describe("Build not to the highest level route", () => {
   });
 });
 
-describe("Add a query string", () => {
+describe("Add query parameters", () => {
   it("app.com?page=abc", () => {
     const routes = generate(["app.com"])();
     const route = routes().build({ page: "abc" });
