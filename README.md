@@ -22,9 +22,9 @@ npm i @juliushuck/generate-route
 ### 2. Import the generate function
 
 ```js
-import { generate } from "@juliushuck/generate-route";
+import { generateRoute } from "@juliushuck/generate-route";
 // or
-const { generate } = require("@juliushuck/generate-route");
+const { generateRoute } = require("@juliushuck/generate-route");
 ```
 
 ### 3. Generate your route structure
@@ -39,19 +39,19 @@ app.com // Highest level route
 ```
 
 ```js
-const routes = generate(["app.com"], { // Highest level route
-  posts: generate(["posts"], {
-    getAll: generate(),
-    getById: generate([":postId"], {
-      comments: generate(["comments"], {
-        getById: generate([":commentId"]), // Lowest level route
+const routes = generateRoute(["app.com"], { // Highest level route
+  posts: generateRoute(["posts"], {
+    getAll: generateRoute(),
+    getById: generateRoute([":postId"], {
+      comments: generateRoute(["comments"], {
+        getById: generateRoute([":commentId"]), // Lowest level route
       }),
     }),
   }),
-})(); // <-- Do not forget to call the first generate function
+})(); // <-- Do not forget to call the first generate route function
 ```
 
-The generate function accepts segments and subroutes. Segments can be a static ones or parameter placeholders. A parameter placeholder starts with `:`.
+The generate route function accepts segments and subroutes. Segments can be a static ones or parameter placeholders. A parameter placeholder starts with `:`.
 
 _When you look closely, you can see that posts has an additional route called getAll. This route has no segments and is not really needed. But I always add it anyways in API routes, because functions should describe actions and for that need a verb._
 
